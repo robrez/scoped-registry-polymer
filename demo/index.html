@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      body > * {
+        margin: 2rem;
+      }
+      .card {
+        padding: 1rem;
+        border: 1px dotted #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <my-polymer-element></my-polymer-element>
+    <div class="card">
+      <h2>Hello From Document Body</h2>
+      <p>This content is directly in document.body. The following element was registered to the global registry</p>
+      <fancy-button>Hi From Global Registry</fancy-button>
+    </div>
+  </body>
+  <script type="module">
+    import '@webcomponents/scoped-custom-element-registry';
+    import './fancy-button-1-define.js';
+    import './SampleElement.js';
+  </script>
+</html>

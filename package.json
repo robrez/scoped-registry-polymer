@@ -1,0 +1,59 @@
+{
+  "name": "@robrez/scoped-registry-polymer",
+  "version": "0.1.0",
+  "description": "Scoped custom element registry for polymer",
+  "type": "module",
+  "types": "index.d.ts",
+  "module": "index.js",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./index.js": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "**/*.d.ts",
+    "**/*.d.ts.map",
+    "**/*.js",
+    "**/*.js.map",
+    "package.json",
+    "!demo/",
+    "!test/"
+  ],
+  "keywords": [
+    "web components",
+    "polymer"
+  ],
+  "scripts": {
+    "build": "tsc --build ./tsconfig.json",
+    "clean": "tsc --build ./tsconfig.json --clean",
+    "test": "echo \"Error: TODO no test specified\" && exit 1",
+    "start": "web-dev-server --node-resolve --open --watch --root-dir demo"
+  },
+  "author": "robrez",
+  "homepage": "https://github.com/robrez/scoped-registry-polymer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robrez/scoped-registry-polymer.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@open-wc/dedupe-mixin": "^1.0.0",
+    "@polymer/polymer": "^3.0.0",
+    "@webcomponents/scoped-custom-element-registry": "^0.0.8",
+    "lit": "^2.0.0",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@polymer/decorators": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "@web/dev-server": "^0.1.35",
+    "eslint": "^8.33.0",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
+  }
+}

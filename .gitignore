@@ -1,0 +1,11 @@
+logs
+*.log
+npm-debug.log*
+coverage
+node_modules/
+.npm
+*.tsbuildinfo
+**/*.js
+**/*.js.map
+**/*.d.ts
+**/*.d.ts.map
